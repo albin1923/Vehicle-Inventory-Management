@@ -1,0 +1,106 @@
+branch_code,branch_name,city,latitude,longitude,model_code,model_name,quantity,reserved
+BLR-MTR-IND,Metro Honda Indiranagar,Bengaluru,12.9716,77.6413,ACT6G,Activa 6G Deluxe,28,4
+BLR-MTR-IND,Metro Honda Indiranagar,Bengaluru,12.9716,77.6413,CB350HN,CB350 Hness DLX,9,1
+BLR-MTR-IND,Metro Honda Indiranagar,Bengaluru,12.9716,77.6413,NX500,NX500 Adventure,0,0
+BLR-WHT-MAL,Whitefield Honda Hub,Bengaluru,12.9698,77.7500,DIO125,Dio 125 Premium,22,3
+BLR-WHT-MAL,Whitefield Honda Hub,Bengaluru,12.9698,77.7500,HORNET2,Hornet 2.0 Repsol,12,2
+BLR-WHT-MAL,Whitefield Honda Hub,Bengaluru,12.9698,77.7500,REBEL1100,Rebel 1100 Tour,0,0
+BLR-ELC-JPN,JP Nagar Metro Honda,Bengaluru,12.9395,77.5830,ACT6G,Activa 6G Deluxe,16,2
+BLR-ELC-JPN,JP Nagar Metro Honda,Bengaluru,12.9395,77.5830,DIO125,Dio 125 Premium,0,0
+BLR-ELC-JPN,JP Nagar Metro Honda,Bengaluru,12.9395,77.5830,CB350HN,CB350 Hness DLX,5,0
+CHN-ANK-ADY,Ankitha Honda Adyar,Chennai,13.0063,80.2570,ACT6G,Activa 6G Deluxe,18,1
+CHN-ANK-ADY,Ankitha Honda Adyar,Chennai,13.0063,80.2570,HORNET2,Hornet 2.0 Repsol,7,1
+CHN-ANK-ADY,Ankitha Honda Adyar,Chennai,13.0063,80.2570,NX500,NX500 Adventure,2,0
+CHN-OMR-SHL,OMR Honda Sholinganallur,Chennai,12.9249,80.1026,DIO125,Dio 125 Premium,24,2
+CHN-OMR-SHL,OMR Honda Sholinganallur,Chennai,12.9249,80.1026,CB350HN,CB350 Hness DLX,6,1
+CHN-OMR-SHL,OMR Honda Sholinganallur,Chennai,12.9249,80.1026,REBEL1100,Rebel 1100 Tour,1,0
+HYD-GAC-BNJ,Gachibowli Honda,Hyderabad,17.4435,78.3772,ACT6G,Activa 6G Deluxe,30,5
+HYD-GAC-BNJ,Gachibowli Honda,Hyderabad,17.4435,78.3772,HORNET2,Hornet 2.0 Repsol,11,1
+HYD-GAC-BNJ,Gachibowli Honda,Hyderabad,17.4435,78.3772,NX500,NX500 Adventure,3,0
+HYD-KPH-MET,KPHB Metro Honda,Hyderabad,17.4937,78.3990,DIO125,Dio 125 Premium,19,2
+HYD-KPH-MET,KPHB Metro Honda,Hyderabad,17.4937,78.3990,CB350HN,CB350 Hness DLX,4,0
+HYD-KPH-MET,KPHB Metro Honda,Hyderabad,17.4937,78.3990,REBEL1100,Rebel 1100 Tour,0,0
+MUM-AND-LNK,Andheri Link Road Honda,Mumbai,19.1320,72.8468,ACT6G,Activa 6G Deluxe,26,4
+MUM-AND-LNK,Andheri Link Road Honda,Mumbai,19.1320,72.8468,DIO125,Dio 125 Premium,15,1
+MUM-AND-LNK,Andheri Link Road Honda,Mumbai,19.1320,72.8468,NX500,NX500 Adventure,2,0
+MUM-NER-TUR,Nerul Turbhe Honda,Navi Mumbai,19.0330,73.0197,ACT6G,Activa 6G Deluxe,17,3
+MUM-NER-TUR,Nerul Turbhe Honda,Navi Mumbai,19.0330,73.0197,HORNET2,Hornet 2.0 Repsol,6,1
+MUM-NER-TUR,Nerul Turbhe Honda,Navi Mumbai,19.0330,73.0197,REBEL1100,Rebel 1100 Tour,0,0
+PUN-HIN-WKD,Hinjewadi Wakad Honda,Pune,18.5906,73.7381,DIO125,Dio 125 Premium,21,2
+PUN-HIN-WKD,Hinjewadi Wakad Honda,Pune,18.5906,73.7381,CB350HN,CB350 Hness DLX,8,1
+PUN-HIN-WKD,Hinjewadi Wakad Honda,Pune,18.5906,73.7381,NX500,NX500 Adventure,1,0
+PUN-KAL-EON,Kalyani Nagar Honda,Pune,18.5204,73.8645,ACT6G,Activa 6G Deluxe,24,4
+PUN-KAL-EON,Kalyani Nagar Honda,Pune,18.5204,73.8645,DIO125,Dio 125 Premium,9,1
+PUN-KAL-EON,Kalyani Nagar Honda,Pune,18.5204,73.8645,HORNET2,Hornet 2.0 Repsol,5,0
+DEL-CPN-CP,Connaught Place Honda,New Delhi,28.6304,77.2177,ACT6G,Activa 6G Deluxe,20,3
+DEL-CPN-CP,Connaught Place Honda,New Delhi,28.6304,77.2177,CB350HN,CB350 Hness DLX,10,2
+DEL-CPN-CP,Connaught Place Honda,New Delhi,28.6304,77.2177,NX500,NX500 Adventure,2,1
+DEL-GGN-SCT,Gurugram Sector 29 Honda,Gurugram,28.4595,77.0266,DIO125,Dio 125 Premium,18,2
+DEL-GGN-SCT,Gurugram Sector 29 Honda,Gurugram,28.4595,77.0266,HORNET2,Hornet 2.0 Repsol,9,1
+DEL-GGN-SCT,Gurugram Sector 29 Honda,Gurugram,28.4595,77.0266,REBEL1100,Rebel 1100 Tour,1,0
+DEL-NOI-SCT,Noida Sector 16 Honda,Noida,28.5355,77.3910,ACT6G,Activa 6G Deluxe,22,3
+DEL-NOI-SCT,Noida Sector 16 Honda,Noida,28.5355,77.3910,CB350HN,CB350 Hness DLX,5,0
+DEL-NOI-SCT,Noida Sector 16 Honda,Noida,28.5355,77.3910,NX500,NX500 Adventure,0,0
+KOL-SLT-PKH,Salt Lake Park Honda,Kolkata,22.5726,88.3639,ACT6G,Activa 6G Deluxe,16,2
+KOL-SLT-PKH,Salt Lake Park Honda,Kolkata,22.5726,88.3639,DIO125,Dio 125 Premium,12,1
+KOL-SLT-PKH,Salt Lake Park Honda,Kolkata,22.5726,88.3639,CB350HN,CB350 Hness DLX,4,0
+KOL-RBY-BCD,Ruby Bypass City Honda,Kolkata,22.4980,88.3710,HORNET2,Hornet 2.0 Repsol,7,1
+KOL-RBY-BCD,Ruby Bypass City Honda,Kolkata,22.4980,88.3710,NX500,NX500 Adventure,2,0
+KOL-RBY-BCD,Ruby Bypass City Honda,Kolkata,22.4980,88.3710,REBEL1100,Rebel 1100 Tour,0,0
+CBE-AVN-PEE,Avinashi Road Premier Honda,Coimbatore,11.0186,76.9725,ACT6G,Activa 6G Deluxe,19,2
+CBE-AVN-PEE,Avinashi Road Premier Honda,Coimbatore,11.0186,76.9725,DIO125,Dio 125 Premium,8,1
+CBE-AVN-PEE,Avinashi Road Premier Honda,Coimbatore,11.0186,76.9725,NX500,NX500 Adventure,1,0
+MYS-KUV-VJP,Kuvempunagar Prime Honda,Mysuru,12.2958,76.6394,ACT6G,Activa 6G Deluxe,14,1
+MYS-KUV-VJP,Kuvempunagar Prime Honda,Mysuru,12.2958,76.6394,CB350HN,CB350 Hness DLX,6,1
+MYS-KUV-VJP,Kuvempunagar Prime Honda,Mysuru,12.2958,76.6394,HORNET2,Hornet 2.0 Repsol,0,0
+TVM-PTM-KZM,Kazhakkoottam Coastal Honda,Thiruvananthapuram,8.5241,76.9366,DIO125,Dio 125 Premium,17,2
+TVM-PTM-KZM,Kazhakkoottam Coastal Honda,Thiruvananthapuram,8.5241,76.9366,NX500,NX500 Adventure,1,0
+TVM-PTM-KZM,Kazhakkoottam Coastal Honda,Thiruvananthapuram,8.5241,76.9366,REBEL1100,Rebel 1100 Tour,0,0
+KOC-KAD-EDP,Kadavanthra Elite Honda,Kochi,9.9312,76.2673,ACT6G,Activa 6G Deluxe,18,2
+KOC-KAD-EDP,Kadavanthra Elite Honda,Kochi,9.9312,76.2673,CB350HN,CB350 Hness DLX,7,1
+KOC-KAD-EDP,Kadavanthra Elite Honda,Kochi,9.9312,76.2673,HORNET2,Hornet 2.0 Repsol,3,0
+CLT-WYT-MKD,West Hill Malabar Honda,Kozhikode,11.2588,75.7804,ACT6G,Activa 6G Deluxe,15,1
+CLT-WYT-MKD,West Hill Malabar Honda,Kozhikode,11.2588,75.7804,DIO125,Dio 125 Premium,10,1
+CLT-WYT-MKD,West Hill Malabar Honda,Kozhikode,11.2588,75.7804,NX500,NX500 Adventure,0,0
+TRC-TNJ-KMN,Tennur Kamal Honda,Tiruchirappalli,10.7905,78.7047,DIO125,Dio 125 Premium,16,1
+TRC-TNJ-KMN,Tennur Kamal Honda,Tiruchirappalli,10.7905,78.7047,CB350HN,CB350 Hness DLX,4,0
+TRC-TNJ-KMN,Tennur Kamal Honda,Tiruchirappalli,10.7905,78.7047,REBEL1100,Rebel 1100 Tour,0,0
+MDU-ANN-TRY,Anna Nagar Triumph Honda,Madurai,9.9252,78.1198,ACT6G,Activa 6G Deluxe,14,2
+MDU-ANN-TRY,Anna Nagar Triumph Honda,Madurai,9.9252,78.1198,HORNET2,Hornet 2.0 Repsol,5,1
+MDU-ANN-TRY,Anna Nagar Triumph Honda,Madurai,9.9252,78.1198,NX500,NX500 Adventure,1,0
+VIZ-ASL-ZNP,Asilmetta Zenith Honda,Visakhapatnam,17.6868,83.2185,ACT6G,Activa 6G Deluxe,13,1
+VIZ-ASL-ZNP,Asilmetta Zenith Honda,Visakhapatnam,17.6868,83.2185,DIO125,Dio 125 Premium,9,1
+VIZ-ASL-ZNP,Asilmetta Zenith Honda,Visakhapatnam,17.6868,83.2185,CB350HN,CB350 Hness DLX,3,0
+VJW-AUT-PRS,Autonagar Prestige Honda,Vijayawada,16.5062,80.6480,HORNET2,Hornet 2.0 Repsol,8,1
+VJW-AUT-PRS,Autonagar Prestige Honda,Vijayawada,16.5062,80.6480,NX500,NX500 Adventure,2,0
+VJW-AUT-PRS,Autonagar Prestige Honda,Vijayawada,16.5062,80.6480,REBEL1100,Rebel 1100 Tour,1,0
+SLM-FTW-SPB,Fort Station Superb Honda,Salem,11.6643,78.1460,ACT6G,Activa 6G Deluxe,11,1
+SLM-FTW-SPB,Fort Station Superb Honda,Salem,11.6643,78.1460,DIO125,Dio 125 Premium,7,1
+SLM-FTW-SPB,Fort Station Superb Honda,Salem,11.6643,78.1460,CB350HN,CB350 Hness DLX,2,0
+NGL-TKM-VLK,Takkar Park Valley Honda,Nagercoil,8.6962,77.7340,ACT6G,Activa 6G Deluxe,9,1
+NGL-TKM-VLK,Takkar Park Valley Honda,Nagercoil,8.6962,77.7340,HORNET2,Hornet 2.0 Repsol,3,0
+NGL-TKM-VLK,Takkar Park Valley Honda,Nagercoil,8.6962,77.7340,NX500,NX500 Adventure,0,0
+TPR-SPN-TUP,Sipcot North Turbo Honda,Tiruppur,11.1085,77.3411,DIO125,Dio 125 Premium,12,1
+TPR-SPN-TUP,Sipcot North Turbo Honda,Tiruppur,11.1085,77.3411,CB350HN,CB350 Hness DLX,3,0
+TPR-SPN-TUP,Sipcot North Turbo Honda,Tiruppur,11.1085,77.3411,REBEL1100,Rebel 1100 Tour,0,0
+PTA-MNK-PLR,Manjadi Pioneer Honda,Pathanamthitta,9.2645,76.7874,ACT6G,Activa 6G Deluxe,10,1
+PTA-MNK-PLR,Manjadi Pioneer Honda,Pathanamthitta,9.2645,76.7874,DIO125,Dio 125 Premium,6,1
+PTA-MNK-PLR,Manjadi Pioneer Honda,Pathanamthitta,9.2645,76.7874,NX500,NX500 Adventure,0,0
+KTM-PAN-PAL,Panampilly Plaza Honda,Kottayam,9.5916,76.5222,ACT6G,Activa 6G Deluxe,12,1
+KTM-PAN-PAL,Panampilly Plaza Honda,Kottayam,9.5916,76.5222,CB350HN,CB350 Hness DLX,4,0
+KTM-PAN-PAL,Panampilly Plaza Honda,Kottayam,9.5916,76.5222,HORNET2,Hornet 2.0 Repsol,1,0
+AGR-SNJ-AGR,Sanjay Place Central Honda,Agra,27.1767,78.0081,ACT6G,Activa 6G Deluxe,18,2
+AGR-SNJ-AGR,Sanjay Place Central Honda,Agra,27.1767,78.0081,DIO125,Dio 125 Premium,10,1
+AGR-SNJ-AGR,Sanjay Place Central Honda,Agra,27.1767,78.0081,NX500,NX500 Adventure,0,0
+JPR-TON-CKR,Tonk Road Chakra Honda,Jaipur,26.9124,75.7873,HORNET2,Hornet 2.0 Repsol,12,2
+JPR-TON-CKR,Tonk Road Chakra Honda,Jaipur,26.9124,75.7873,CB350HN,CB350 Hness DLX,5,1
+JPR-TON-CKR,Tonk Road Chakra Honda,Jaipur,26.9124,75.7873,REBEL1100,Rebel 1100 Tour,1,0
+LKO-HZR-ALM,Hazratganj Alpha Honda,Lucknow,26.8467,80.9462,ACT6G,Activa 6G Deluxe,20,3
+LKO-HZR-ALM,Hazratganj Alpha Honda,Lucknow,26.8467,80.9462,DIO125,Dio 125 Premium,11,1
+LKO-HZR-ALM,Hazratganj Alpha Honda,Lucknow,26.8467,80.9462,NX500,NX500 Adventure,2,0
+BPL-ARB-HBT,Arera Colony Habit Honda,Bhopal,23.2599,77.4126,ACT6G,Activa 6G Deluxe,16,2
+BPL-ARB-HBT,Arera Colony Habit Honda,Bhopal,23.2599,77.4126,HORNET2,Hornet 2.0 Repsol,6,1
+BPL-ARB-HBT,Arera Colony Habit Honda,Bhopal,23.2599,77.4126,CB350HN,CB350 Hness DLX,4,0
+CHD-MDC-PLZ,Madhya Marg Plaza Honda,Chandigarh,30.7333,76.7794,DIO125,Dio 125 Premium,15,2
+CHD-MDC-PLZ,Madhya Marg Plaza Honda,Chandigarh,30.7333,76.7794,NX500,NX500 Adventure,2,0
+CHD-MDC-PLZ,Madhya Marg Plaza Honda,Chandigarh,30.7333,76.7794,REBEL1100,Rebel 1100 Tour,0,0

@@ -1,0 +1,106 @@
+branch_code,branch_name,city,latitude,longitude,model_code,model_name,quantity,reserved
+H001,EVM Honda,Kottayam,9.5916,76.5222,MD001,Activa 6G,12,2
+H001,EVM Honda,Kottayam,9.5916,76.5222,MD002,Dio,8,1
+H001,EVM Honda,Kottayam,9.5916,76.5222,MD003,Shine 125,10,2
+H002,Popular Honda,Kochi,9.9312,76.2673,MD001,Activa 6G,15,3
+H002,Popular Honda,Kochi,9.9312,76.2673,MD004,SP 125,7,1
+H002,Popular Honda,Kochi,9.9312,76.2673,MD005,Unicorn 160,5,1
+H003,Muthoot Honda,Trivandrum,8.5241,76.9366,MD001,Activa 6G,18,3
+H003,Muthoot Honda,Trivandrum,8.5241,76.9366,MD002,Dio,9,2
+H003,Muthoot Honda,Trivandrum,8.5241,76.9366,MD006,Hornet 2.0,4,1
+H004,EVM Honda,Alappuzha,9.4981,76.3388,MD001,Activa 6G,14,2
+H004,EVM Honda,Alappuzha,9.4981,76.3388,MD004,SP 125,8,1
+H004,EVM Honda,Alappuzha,9.4981,76.3388,MD007,CB200X,3,1
+H005,Popular Honda,Pathanamthitta,9.2648,76.787,MD002,Dio,11,2
+H005,Popular Honda,Pathanamthitta,9.2648,76.787,MD003,Shine 125,7,1
+H005,Popular Honda,Pathanamthitta,9.2648,76.787,MD005,Unicorn 160,5,1
+H006,Queen Honda,Kollam,8.8932,76.6141,MD001,Activa 6G,17,3
+H006,Queen Honda,Kollam,8.8932,76.6141,MD002,Dio,10,2
+H006,Queen Honda,Kollam,8.8932,76.6141,MD004,SP 125,6,1
+H007,EVM Honda,Thodupuzha,9.891,76.7184,MD001,Activa 6G,13,2
+H007,EVM Honda,Thodupuzha,9.891,76.7184,MD006,Hornet 2.0,5,1
+H007,EVM Honda,Thodupuzha,9.891,76.7184,MD007,CB200X,3,1
+H008,Popular Honda,Muvattupuzha,9.9798,76.5735,MD002,Dio,12,2
+H008,Popular Honda,Muvattupuzha,9.9798,76.5735,MD003,Shine 125,9,1
+H008,Popular Honda,Muvattupuzha,9.9798,76.5735,MD005,Unicorn 160,4,1
+H009,Muthoot Honda,Changanassery,9.442,76.54,MD001,Activa 6G,10,2
+H009,Muthoot Honda,Changanassery,9.442,76.54,MD004,SP 125,8,1
+H009,Muthoot Honda,Changanassery,9.442,76.54,MD006,Hornet 2.0,3,1
+H010,EVM Honda,Kanjirappally,9.5542,76.7927,MD001,Activa 6G,11,2
+H010,EVM Honda,Kanjirappally,9.5542,76.7927,MD002,Dio,8,1
+H010,EVM Honda,Kanjirappally,9.5542,76.7927,MD007,CB200X,2,1
+H011,Popular Honda,Pala,9.7117,76.6856,MD002,Dio,12,2
+H011,Popular Honda,Pala,9.7117,76.6856,MD003,Shine 125,9,1
+H011,Popular Honda,Pala,9.7117,76.6856,MD005,Unicorn 160,6,1
+H012,Muthoot Honda,Vaikom,9.7486,76.3966,MD001,Activa 6G,14,2
+H012,Muthoot Honda,Vaikom,9.7486,76.3966,MD004,SP 125,7,1
+H012,Muthoot Honda,Vaikom,9.7486,76.3966,MD006,Hornet 2.0,3,1
+H013,EVM Honda,Ernakulam,9.9816,76.2999,MD001,Activa 6G,19,3
+H013,EVM Honda,Ernakulam,9.9816,76.2999,MD002,Dio,10,2
+H013,EVM Honda,Ernakulam,9.9816,76.2999,MD008,CB350 H'Ness,4,1
+H014,Popular Honda,Kottarakkara,8.993,76.7842,MD001,Activa 6G,15,2
+H014,Popular Honda,Kottarakkara,8.993,76.7842,MD004,SP 125,8,1
+H014,Popular Honda,Kottarakkara,8.993,76.7842,MD007,CB200X,3,1
+H015,Muthoot Honda,Tirur,10.912,75.9221,MD002,Dio,11,2
+H015,Muthoot Honda,Tirur,10.912,75.9221,MD003,Shine 125,9,1
+H015,Muthoot Honda,Tirur,10.912,75.9221,MD008,CB350 H'Ness,3,1
+H016,EVM Honda,Palakkad,10.7867,76.6548,MD001,Activa 6G,17,3
+H016,EVM Honda,Palakkad,10.7867,76.6548,MD004,SP 125,9,2
+H016,EVM Honda,Palakkad,10.7867,76.6548,MD005,Unicorn 160,5,1
+H017,Popular Honda,Thrissur,10.5276,76.2144,MD002,Dio,13,2
+H017,Popular Honda,Thrissur,10.5276,76.2144,MD003,Shine 125,10,2
+H017,Popular Honda,Thrissur,10.5276,76.2144,MD006,Hornet 2.0,5,1
+H018,Muthoot Honda,Angamaly,10.196,76.3869,MD001,Activa 6G,12,2
+H018,Muthoot Honda,Angamaly,10.196,76.3869,MD004,SP 125,8,1
+H018,Muthoot Honda,Angamaly,10.196,76.3869,MD005,Unicorn 160,4,1
+H019,EVM Honda,Kottakkal,10.9945,76.0048,MD002,Dio,14,2
+H019,EVM Honda,Kottakkal,10.9945,76.0048,MD003,Shine 125,9,1
+H019,EVM Honda,Kottakkal,10.9945,76.0048,MD008,CB350 H'Ness,3,1
+H020,Popular Honda,Kozhikode,11.2588,75.7804,MD001,Activa 6G,20,3
+H020,Popular Honda,Kozhikode,11.2588,75.7804,MD004,SP 125,8,1
+H020,Popular Honda,Kozhikode,11.2588,75.7804,MD006,Hornet 2.0,5,1
+H021,Muthoot Honda,Perinthalmanna,10.977,76.222,MD002,Dio,14,2
+H021,Muthoot Honda,Perinthalmanna,10.977,76.222,MD003,Shine 125,8,1
+H021,Muthoot Honda,Perinthalmanna,10.977,76.222,MD005,Unicorn 160,5,1
+H022,EVM Honda,Idukki,9.8492,76.9798,MD001,Activa 6G,11,2
+H022,EVM Honda,Idukki,9.8492,76.9798,MD004,SP 125,7,1
+H022,EVM Honda,Idukki,9.8492,76.9798,MD007,CB200X,4,1
+H023,Popular Honda,Malappuram,11.073,76.0743,MD002,Dio,15,2
+H023,Popular Honda,Malappuram,11.073,76.0743,MD003,Shine 125,10,2
+H023,Popular Honda,Malappuram,11.073,76.0743,MD008,CB350 H'Ness,3,1
+H024,Vision Honda,Manjeri,11.1191,76.1194,MD001,Activa 6G,13,2
+H024,Vision Honda,Manjeri,11.1191,76.1194,MD005,Unicorn 160,6,1
+H024,Vision Honda,Manjeri,11.1191,76.1194,MD007,CB200X,5,1
+H025,Muthoot Honda,Kunnamkulam,10.6503,76.0665,MD001,Activa 6G,12,2
+H025,Muthoot Honda,Kunnamkulam,10.6503,76.0665,MD004,SP 125,9,1
+H025,Muthoot Honda,Kunnamkulam,10.6503,76.0665,MD006,Hornet 2.0,4,1
+H026,EVM Honda,Perinthalmanna,10.977,76.222,MD002,Dio,10,2
+H026,EVM Honda,Perinthalmanna,10.977,76.222,MD005,Unicorn 160,5,1
+H026,EVM Honda,Perinthalmanna,10.977,76.222,MD008,CB350 H'Ness,2,1
+H027,Vision Honda,Vadakara,11.608,75.5917,MD001,Activa 6G,14,2
+H027,Vision Honda,Vadakara,11.608,75.5917,MD003,Shine 125,7,1
+H027,Vision Honda,Vadakara,11.608,75.5917,MD007,CB200X,3,1
+H028,Popular Honda,Kannur,11.8745,75.3704,MD002,Dio,15,3
+H028,Popular Honda,Kannur,11.8745,75.3704,MD004,SP 125,8,1
+H028,Popular Honda,Kannur,11.8745,75.3704,MD006,Hornet 2.0,5,1
+H029,EVM Honda,Payyanur,12.1016,75.202,MD001,Activa 6G,12,2
+H029,EVM Honda,Payyanur,12.1016,75.202,MD005,Unicorn 160,5,1
+H029,EVM Honda,Payyanur,12.1016,75.202,MD008,CB350 H'Ness,2,1
+H030,Muthoot Honda,Thalassery,11.7497,75.489,MD002,Dio,13,2
+H030,Muthoot Honda,Thalassery,11.7497,75.489,MD003,Shine 125,6,1
+H030,Muthoot Honda,Thalassery,11.7497,75.489,MD007,CB200X,4,1
+H031,Vision Honda,Kasargod,12.4996,74.9869,MD001,Activa 6G,11,2
+H031,Vision Honda,Kasargod,12.4996,74.9869,MD004,SP 125,8,1
+H031,Vision Honda,Kasargod,12.4996,74.9869,MD005,Unicorn 160,4,1
+H032,Muthoot Honda,Ponnani,10.7662,75.9252,MD002,Dio,10,2
+H032,Muthoot Honda,Ponnani,10.7662,75.9252,MD005,Unicorn 160,6,1
+H032,Muthoot Honda,Ponnani,10.7662,75.9252,MD008,CB350 H'Ness,3,1
+H033,Popular Honda,Ottappalam,10.7707,76.3786,MD001,Activa 6G,15,2
+H033,Popular Honda,Ottappalam,10.7707,76.3786,MD004,SP 125,8,1
+H033,Popular Honda,Ottappalam,10.7707,76.3786,MD006,Hornet 2.0,5,1
+H034,EVM Honda,Aluva,10.1076,76.3516,MD002,Dio,13,2
+H034,EVM Honda,Aluva,10.1076,76.3516,MD003,Shine 125,9,1
+H034,EVM Honda,Aluva,10.1076,76.3516,MD005,Unicorn 160,6,1
+H035,Muthoot Honda,Irinjalakuda,10.3423,76.21,MD001,Activa 6G,14,2
+H035,Muthoot Honda,Irinjalakuda,10.3423,76.21,MD004,SP 125,7,1
+H035,Muthoot Honda,Irinjalakuda,10.3423,76.21,MD007,CB200X,4,1

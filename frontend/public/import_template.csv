@@ -1,0 +1,12 @@
+# Honda Internal System - Import Template (CSV)
+# Instructions:
+#  - branch_code, model_code, quantity are REQUIRED
+#  - branch_name, city, latitude, longitude: needed for NEW branches
+#  - latitude: -90 to 90; longitude: -180 to 180 (use Google Maps for coordinates)
+#  - reserved: optional, defaults to 0
+#
+# Example rows below. Replace with your actual showroom data.
+branch_code,branch_name,city,latitude,longitude,model_code,model_name,quantity,reserved
+TVM-CBC-BHASI,CBC Honda Bhasi,Thiruvananthapuram,8.5241,76.9366,ACT6G,Activa 6G Deluxe,20,2
+EKM-EVM-VYT,EVM Honda Vyttila,Kochi,9.9708,76.3183,DIO125,Dio 125 Premium,15,1
+CLT-KTC-YMCA,Kuniyil Honda YMCA,Kozhikode,11.2588,75.7804,CB350HN,CB350 Hness DLX,7,0
