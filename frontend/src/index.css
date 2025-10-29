@@ -4,6 +4,36 @@
 
 body {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f8fafc;
   color: #1f2937;
+  background: linear-gradient(180deg, rgba(248, 250, 252, 1) 0%, rgba(241, 245, 249, 0.85) 45%, #f8fafc 100%);
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image: radial-gradient(circle at 15% 20%, rgba(230, 0, 18, 0.12), transparent 60%),
+    radial-gradient(circle at 85% 10%, rgba(59, 130, 246, 0.12), transparent 55%),
+    radial-gradient(circle at 50% 80%, rgba(15, 118, 110, 0.08), transparent 60%);
+  filter: blur(0px);
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(circle, rgba(15, 23, 42, 0.04) 1px, transparent 0);
+  background-size: 40px 40px;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+#root {
+  position: relative;
+  z-index: 0;
 }

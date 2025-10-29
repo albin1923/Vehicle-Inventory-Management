@@ -8,7 +8,7 @@ from datetime import date
 from sqlalchemy import select
 
 from app.db.session import AsyncSessionLocal
-from app.models import VehicleStock, Customer, SalesRecord, User, UserRole
+from app.models import VehicleStock, Customer, SalesRecord, User, UserRole, Branch
 from app.models.sales_record import PaymentMode
 from app.core.security import get_password_hash
 
@@ -17,10 +17,36 @@ async def seed_honda_data():
     async with AsyncSessionLocal() as db:
         print("[INFO] Seeding Honda sales tracking data...")
 
-        # 1. Create default users if they don't exist
+        # 1. Ensure branches exist
+        print("\n[INFO] Creating branches...")
+        branch_definitions = [
+            {"code": "KTM", "name": "Kottayam Central", "city": "Kottayam", "latitude": 9.5916, "longitude": 76.5222},
+            {"code": "CHRY", "name": "Changanassery Outlet", "city": "Changanassery", "latitude": 9.4420, "longitude": 76.5389},
+            {"code": "ETM", "name": "Ettumanoor Showroom", "city": "Ettumanoor", "latitude": 9.6685, "longitude": 76.5640},
+            {"code": "EPTA", "name": "Ettumanoor Puthenangady", "city": "Ettumanoor", "latitude": 9.5893, "longitude": 76.5627},
+            {"code": "KPLY", "name": "Kanjirapally Branch", "city": "Kanjirapally", "latitude": 9.4575, "longitude": 76.7877},
+        ]
+
+        for branch_data in branch_definitions:
+            result = await db.execute(select(Branch).where(Branch.code == branch_data["code"]))
+            branch = result.unique().scalar_one_or_none()
+            if not branch:
+                branch = Branch(**branch_data)
+                db.add(branch)
+                print(f"  [OK] Created branch: {branch_data['name']} ({branch_data['code']})")
+
+        await db.commit()
+
+        branch_map: dict[str, Branch] = {}
+        for branch_data in branch_definitions:
+            result = await db.execute(select(Branch).where(Branch.code == branch_data["code"]))
+            branch = result.unique().scalar_one()
+            branch_map[branch.code] = branch
+
+        # 2. Create default users if they don't exist
         print("\n[INFO] Creating users...")
         result = await db.execute(select(User).where(User.username == "admin"))
-        admin = result.scalar_one_or_none()
+        admin = result.unique().scalar_one_or_none()
         
         if not admin:
             admin = User(
@@ -35,7 +61,7 @@ async def seed_honda_data():
             print("  [OK] Created admin user (admin/admin123)")
         
         result = await db.execute(select(User).where(User.username == "sales"))
-        salesman = result.scalar_one_or_none()
+        salesman = result.unique().scalar_one_or_none()
         
         if not salesman:
             salesman = User(
@@ -55,7 +81,7 @@ async def seed_honda_data():
         for exec_name in executives:
             username = exec_name.lower()
             result = await db.execute(select(User).where(User.username == username))
-            user = result.scalar_one_or_none()
+            user = result.unique().scalar_one_or_none()
             if not user:
                 user = User(
                     email=f"{username}@honda.com",
@@ -75,7 +101,7 @@ async def seed_honda_data():
         for user in exec_users.values():
             await db.refresh(user)
         
-        # 2. Create vehicle stock based on Excel sheet
+    # 3. Create vehicle stock based on Excel sheet
         print("\n[INFO] Creating vehicle stock...")
         
         # ACTIVA 125 BS-VI variants and colors from Excel
@@ -88,6 +114,9 @@ async def seed_honda_data():
         # GRAZIA variants from Excel (right side of sheet)
         grazia_colors = [("WHITE", 0), ("BLACK", 0), ("BLUE", 0), ("YELLOW", 0), ("RED", 0), ("GREY", 0), ("SPORTS RED", 0)]
         
+        branch_cycle = list(branch_map.values()) or [None]
+        branch_index = 0
+
         for variant, colors in activa_variants:
             for color, qty in colors:
                 # Normalize quantity (negative means pre-sold, set to 0 for now, can adjust stock later)
@@ -100,15 +129,31 @@ async def seed_honda_data():
                         VehicleStock.color == color
                     )
                 )
-                if not result.scalar_one_or_none():
+                stock = result.unique().scalar_one_or_none()
+                if not stock:
+                    branch = branch_cycle[branch_index % len(branch_cycle)]
+                    branch_index += 1
                     stock = VehicleStock(
                         model_name="ACTIVA 125 BS-VI",
                         variant=variant,
                         color=color,
-                        quantity=actual_qty
+                        quantity=actual_qty,
+                        branch_code=branch.code if branch else None,
+                        branch_name=branch.name if branch else None,
+                        city=branch.city if branch else None,
+                        latitude=branch.latitude if branch else None,
+                        longitude=branch.longitude if branch else None,
                     )
                     db.add(stock)
                     print(f"  [OK] Added: ACTIVA 125 BS-VI {variant} {color} (qty: {actual_qty})")
+                else:
+                    branch = branch_cycle[branch_index % len(branch_cycle)]
+                    branch_index += 1
+                    stock.branch_code = branch.code if branch else stock.branch_code
+                    stock.branch_name = branch.name if branch else stock.branch_name
+                    stock.city = branch.city if branch else stock.city
+                    stock.latitude = branch.latitude if branch else stock.latitude
+                    stock.longitude = branch.longitude if branch else stock.longitude
         
         # Add GRAZIA stock (using DRUM variant as default)
         for color, qty in grazia_colors:
@@ -120,15 +165,31 @@ async def seed_honda_data():
                     VehicleStock.color == color
                 )
             )
-            if not result.scalar_one_or_none():
+            stock = result.unique().scalar_one_or_none()
+            if not stock:
+                branch = branch_cycle[branch_index % len(branch_cycle)]
+                branch_index += 1
                 stock = VehicleStock(
                     model_name="GRAZIA",
                     variant="ID(DRUM)",
                     color=color,
-                    quantity=actual_qty
+                    quantity=actual_qty,
+                    branch_code=branch.code if branch else None,
+                    branch_name=branch.name if branch else None,
+                    city=branch.city if branch else None,
+                    latitude=branch.latitude if branch else None,
+                    longitude=branch.longitude if branch else None,
                 )
                 db.add(stock)
                 print(f"  [OK] Added: GRAZIA DRUM {color} (qty: {actual_qty})")
+            else:
+                branch = branch_cycle[branch_index % len(branch_cycle)]
+                branch_index += 1
+                stock.branch_code = branch.code if branch else stock.branch_code
+                stock.branch_name = branch.name if branch else stock.branch_name
+                stock.city = branch.city if branch else stock.city
+                stock.latitude = branch.latitude if branch else stock.latitude
+                stock.longitude = branch.longitude if branch else stock.longitude
         
         await db.commit()
         
@@ -166,7 +227,7 @@ async def seed_honda_data():
         for sale_data in sales_data:
             # Create or get customer
             result = await db.execute(select(Customer).where(Customer.name == sale_data["customer"]))
-            customer = result.scalar_one_or_none()
+            customer = result.unique().scalar_one_or_none()
             
             if not customer:
                 customer = Customer(
@@ -185,7 +246,7 @@ async def seed_honda_data():
                     VehicleStock.color == sale_data["color"]
                 )
             )
-            vehicle_stock = result.scalar_one_or_none()
+            vehicle_stock = result.unique().scalar_one_or_none()
             
             if not vehicle_stock:
                 print(f"  [WARN] Vehicle stock not found for {sale_data['variant']} {sale_data['color']}, skipping sale")
@@ -195,6 +256,8 @@ async def seed_honda_data():
             executive = exec_users.get(sale_data["exec"], salesman)
             
             # Create sale record
+            branch = branch_map.get(sale_data["location"])
+
             sale = SalesRecord(
                 customer_id=customer.id,
                 vehicle_stock_id=vehicle_stock.id,
@@ -206,7 +269,9 @@ async def seed_honda_data():
                 bank=sale_data["bank"],
                 payment_date=date.fromisoformat(sale_data["date"]),
                 amount_received=Decimal(str(sale_data["amount"])),
-                location=sale_data["location"]
+                location=branch.city if branch else sale_data["location"],
+                branch_code=branch.code if branch else None,
+                branch_name=branch.name if branch else None
             )
             db.add(sale)
             print(f"  [OK] Created sale: {customer.name} - {sale_data['vehicle']} ({sale_data['exec']})")
@@ -214,12 +279,12 @@ async def seed_honda_data():
 
         print("\n[SUCCESS] Seeding complete!")
         print("\n[SUMMARY]")
-    print("   - Default logins:")
-    print("     * Admin: admin / admin123")
-    print("     * Salesman: sales / sales123")
-    print(f"     * Executives: {', '.join([e.lower() for e in executives])} / sales123")
-    print("   - Vehicle stock created for ACTIVA 125 BS-VI and GRAZIA")
-    print("   - Sample customers and sales records from Excel sheet")
+        print("   - Default logins:")
+        print("     * Admin: admin / admin123")
+        print("     * Salesman: sales / sales123")
+        print(f"     * Executives: {', '.join([e.lower() for e in executives])} / sales123")
+        print("   - Vehicle stock created for ACTIVA 125 BS-VI and GRAZIA")
+        print("   - Sample customers and sales records from Excel sheet")
 
 
 if __name__ == "__main__":

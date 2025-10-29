@@ -1,8 +1,14 @@
-from pydantic import BaseModel, Field
-from typing import Optional
+from __future__ import annotations
+
 from datetime import datetime, date
-from enum import Enum
 from decimal import Decimal
+from enum import Enum
+from typing import Optional
+
+from pydantic import BaseModel, Field
+
+from app.models.user import UserRole
+from app.schemas.base import ORMModel
 
 
 class PaymentModeEnum(str, Enum):
@@ -54,15 +60,29 @@ class SalesRecordUpdate(BaseModel):
     is_payment_received: Optional[bool] = None
 
 
-class SalesRecord(SalesRecordBase):
+class CustomerSnapshot(ORMModel):
+    id: int
+    name: str
+    phone: Optional[str] = None
+    location: Optional[str] = None
+
+
+class UserSnapshot(ORMModel):
+    id: int
+    email: str
+    username: str
+    full_name: str
+    user_role: UserRole
+
+
+class SalesRecord(SalesRecordBase, ORMModel):
+    model_config = ORMModel.model_config
+
     id: int
     executive_id: Optional[int] = None
     created_at: datetime
     updated_at: datetime
     
-    # Nested objects
-    customer: Optional[dict] = None
-    executive: Optional[dict] = None
-
-    class Config:
-        from_attributes = True
+    # Nested objects rendered via ORM mode
+    customer: Optional[CustomerSnapshot] = None
+    executive: Optional[UserSnapshot] = None

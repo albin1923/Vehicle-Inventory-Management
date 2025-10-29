@@ -5,6 +5,7 @@ from datetime import datetime
 from pydantic import BaseModel, EmailStr
 
 from app.schemas.base import ORMModel
+from app.models.user import UserRole
 
 
 class Token(BaseModel):
@@ -26,8 +27,10 @@ class UserLogin(BaseModel):
 class UserRead(ORMModel):
     id: int
     email: EmailStr
+    username: str
     full_name: str
     is_active: bool
+    user_role: UserRole
     branch_id: int | None
     created_at: datetime
     updated_at: datetime

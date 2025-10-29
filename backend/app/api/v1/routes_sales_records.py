@@ -68,7 +68,7 @@ async def list_sales(
     for sale in sales:
         await db.refresh(sale, ["customer", "executive"])
 
-    return sales
+    return [SalesRecordSchema.model_validate(sale) for sale in sales]
 
 
 @router.post("/", response_model=SalesRecordSchema, status_code=status.HTTP_201_CREATED)
@@ -103,8 +103,8 @@ async def create_sale(
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail=(
-                f"Vehicle out of stock ({vehicle_stock.model_name}".
-                f" {vehicle_stock.variant or '-'} {vehicle_stock.color or '-'})"
+                f"Vehicle out of stock ({vehicle_stock.model_name} "
+                f"{vehicle_stock.variant or '-'} {vehicle_stock.color or '-'})"
             ),
         )
 
@@ -136,7 +136,7 @@ async def create_sale(
     await db.refresh(vehicle_stock)
     await _sync_stock(vehicle_stock, db)
 
-    return sale
+    return SalesRecordSchema.model_validate(sale)
 
 
 @router.get("/{sale_id}", response_model=SalesRecordSchema)
@@ -155,7 +155,7 @@ async def get_sale(
         raise HTTPException(status_code=403, detail="Access denied")
 
     await db.refresh(sale, ["customer", "executive"])
-    return sale
+    return SalesRecordSchema.model_validate(sale)
 
 
 @router.patch("/{sale_id}", response_model=SalesRecordSchema)
@@ -189,7 +189,7 @@ async def update_sale(
         if stock:
             await _sync_stock(stock, db)
 
-    return sale
+    return SalesRecordSchema.model_validate(sale)
 
 
 @router.delete("/{sale_id}", status_code=status.HTTP_204_NO_CONTENT)

@@ -31,3 +31,9 @@ def create_application() -> FastAPI:
 
 
 app = create_application()
+
+
+@app.get("/health", include_in_schema=False)
+async def health_check() -> dict[str, str]:
+    """Lightweight readiness probe used by managed hosting environments."""
+    return {"status": "ok"}
