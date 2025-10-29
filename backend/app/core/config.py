@@ -11,6 +11,9 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "Honda Internal System"
     EXPOSE_DOCS: bool = True
 
+    EXCEL_INVENTORY_PATH: str = "storage/imports/honda_showrooms_kerala_data_v2.xlsx"
+    EXCEL_EXPORT_FILENAME: str = "honda_live_inventory.xlsx"
+
     POSTGRES_SERVER: str = "db"
     POSTGRES_PORT: int = 5432
     POSTGRES_USER: str = "honda"

@@ -13,10 +13,20 @@ from app.api.v1 import (
 	routes_sales,
 	routes_transfers,
 	routes_vehicle_models,
+	routes_customers,
+	routes_vehicle_stock,
+	routes_sales_records,
 )
 
 api_router = APIRouter()
 api_router.include_router(routes_auth.router, prefix="/auth", tags=["auth"])
+
+# New sales tracking routes
+api_router.include_router(routes_customers.router, prefix="/customers", tags=["customers"])
+api_router.include_router(routes_vehicle_stock.router, prefix="/vehicle-stock", tags=["vehicle-stock"])
+api_router.include_router(routes_sales_records.router, prefix="/sales-records", tags=["sales-records"])
+
+# Legacy routes (keep for compatibility)
 api_router.include_router(routes_branches.router, prefix="/branches", tags=["branches"])
 api_router.include_router(routes_vehicle_models.router, prefix="/models", tags=["models"])
 api_router.include_router(routes_inventory.router, prefix="/inventory", tags=["inventory"])

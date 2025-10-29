@@ -8,7 +8,7 @@ export const formatCurrency = (amount?: number | string | null): string => {
     return "INR 0";
   }
 
-  return `INR ${value.toLocaleString("en-IN", { maximumFractionDigits: 0 })}`;
+  return `INR ${value.toLocaleString("en-IN", { minimumFractionDigits: 0, maximumFractionDigits: 2 })}`;
 };
 
 export const formatDate = (isoDate?: string | null): string => {

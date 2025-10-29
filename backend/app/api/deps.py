@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections.abc import AsyncIterator
 from typing import Annotated
 
 from fastapi import Depends, HTTPException, status
@@ -8,18 +9,22 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.config import settings
 from app.core.security import oauth2_scheme
-from app.db.session import get_db
+from app.db.session import get_db as _get_db_session
 from app.models.user import User
 
 
-async def get_session() -> AsyncSession:
-    async for session in get_db():
+async def get_db() -> AsyncIterator[AsyncSession]:
+    async for session in _get_db_session():
         yield session
+
+
+# Temporary alias until all callers migrate to ``get_db``.
+get_session = get_db
 
 
 async def get_current_user(
     token: Annotated[str, Depends(oauth2_scheme)],
-    session: Annotated[AsyncSession, Depends(get_session)],
+    session: Annotated[AsyncSession, Depends(get_db)],
 ) -> User:
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
@@ -35,6 +40,14 @@ async def get_current_user(
         raise credentials_exception from exc
 
     user = await session.get(User, int(subject))
-    if user is None or not user.is_active:
+    if user is None:
         raise credentials_exception
     return user
+
+
+async def get_current_active_user(
+    current_user: Annotated[User, Depends(get_current_user)],
+) -> User:
+    if not current_user.is_active:
+        raise HTTPException(status_code=400, detail="Inactive user")
+    return current_user

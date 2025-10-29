@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from sqlalchemy import select
+from sqlalchemy import select, or_
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.security import get_password_hash, verify_password
@@ -13,10 +13,20 @@ class UserService:
 
     async def get_by_email(self, email: str) -> User | None:
         result = await self.session.execute(select(User).where(User.email == email))
-        return result.scalar_one_or_none()
+        return result.scalars().first()
+    
+    async def get_by_username(self, username: str) -> User | None:
+        result = await self.session.execute(select(User).where(User.username == username))
+        return result.scalars().first()
 
-    async def authenticate(self, email: str, password: str) -> User | None:
-        user = await self.get_by_email(email)
+    async def authenticate(self, username_or_email: str, password: str) -> User | None:
+        # Support both username and email login
+        result = await self.session.execute(
+            select(User).where(
+                or_(User.email == username_or_email, User.username == username_or_email)
+            )
+        )
+        user = result.scalars().first()
         if not user:
             return None
         if not verify_password(password, user.hashed_password):
