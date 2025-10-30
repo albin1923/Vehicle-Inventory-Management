@@ -39,10 +39,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install poetry==2.2.1
-          poetry config virtualenvs.in-project true
+          python -m poetry config virtualenvs.in-project true
 
       - name: Install dependencies
-        run: poetry install --no-interaction --no-root
+        run: python -m poetry install --no-interaction --no-root
 
       - name: Run tests
-        run: poetry run pytest --maxfail=1 --disable-warnings -q
+        run: python -m poetry run pytest --maxfail=1 --disable-warnings -q
