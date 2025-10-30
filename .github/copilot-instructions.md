@@ -24,10 +24,12 @@
 	Skip this step for "Hello World" projects.
 	-->
 
-- [ ] Install Required Extensions
+- [x] Install Required Extensions
+	- Summary: No additional VS Code extensions requested; none installed per checklist instructions.
 	<!-- ONLY install extensions provided mentioned in the get_project_setup_info. Skip this step otherwise and mark as completed. -->
 
-- [ ] Compile the Project
+- [x] Compile the Project
+	- Summary: Installed backend deps with Poetry, ran pytest (0 tests), and built frontend via npm run build.
 	<!--
 	Verify that all previous steps have been completed.
 	Install any missing dependencies.
